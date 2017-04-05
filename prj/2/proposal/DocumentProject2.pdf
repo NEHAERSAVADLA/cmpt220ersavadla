@@ -1,0 +1,44 @@
+Project Title:Shopaholics
+Abstarct:The project shopaholics is gives a clear idea of how a shopping cart is maintained in an e-commerce website.How a user reachs his destination i.e,from the welcome screen of the applicatio to the checkout,payment  and confirmation of his purchase.This project includes some javascript screens which makes a flow from home page,product page,cart,wishlist,checkout,end screen.
+The javascript screens are collaborated by the Spring MVC architecture.Here we use angular JS for the User Interface i.e,view part for the rich look of the application.The MVc architecture helps a lot in the flow of the application the webconatiner takes care of the MVC architecture.
+Introduction:Any shopping application needs to serve all the requirements of the user in a particular context.
+The Shopaholics application allows the user to view its homepag where he can view the categories of things he need to purchase the offers etc.When the user selects a product he is redirected to the product page where he can find the description of th eparticular product ,its price,offers,review,ratings etc.The user now have two options either to select the product,go back.If the user selects the product he can find two ore options either to go to the cart and checkout or add the product to the wishlist so that he can checkout the product later.
+Once the user select the product and goes to cart,there he can find the quantity change option ,the price variations based on quantity etc.When the user checksout the producct from the cart,the page is redirected to the payment page where he has different options like Cash on delivery,credit/debitetc.Once the user is done with the payment he has his confirmation and then he can go either back to continue shopping or end the application.
+Detailed System Description: The whole system has three tasks.
+1.Creating a flow between all the view pages
+2.Populating the data in the database which I have maintained for the appplication to the view javascript screens.
+3.Checkout and payment.
+The project comes to nice finishing if we maintain this 3 tasks properly.So the below mentioned classes gives a complete description of how they used in the project.
+Store and Product class:This is the homepage of the application.Store class is javascript file.It has a getproduct() method to retrieve the products from the database.To set the current product when Url provides a productsku,the store controller uses this method.
+The Product class has three key variables  which are used by the cart,sku(unique id),name and price.All the other variables are used elsewhere in th e application but not in the cart.
+ShoppingCart:
+The shoppingCart class is a js file and implements different methods like addItems(),clearItems(),gettotalCount(),gettotalPrice(),checkout().
+After all this java classes we have a default.html class which provides the master view to the application .This class contains all the angular js attributes like ng-app,ng-view etc .
+Requirements: Spring MVC
+                                 JAVA
+                                JavaScript
+                               HTML
+                                Angular JS
+                               DBMS
+                               SQL
+Literature Survey:When I started developing the shopping cart, I had the following requirements in mind:
+
+Must be 100% pure JavaScript (so it is easy to integrate into any site)
+Must follow the MVVM architecture (so it is easy to customize its look and feel)
+Must be safe (we don't want to be responsible for storing people's credit card numbers etc.)
+Must be fast and reliable (we don’t want users to give up before they checkout!)
+Must be flexible (it should allow payments to be processed using different services) 
+Must be extensible (adding new payment methods should be easy)
+Must be easy to use (because there's no reason for it to be complicated)
+I believe the “shoppingCart” class described above addresses all these requirements. It uses jQuery and integrates well with AngularJS applications. The “shoppingCart” class contains all the logic and provides the object model needed to create flexible and attractive views.
+User Manual:
+This system is very easy to use.It helps the user to go to every other page by jus one click.If the user clicks on a product in the homepage he goes to the product page.If he clicks cart or wishlist he goes to the related pages.If he clicks back  he goes back to the homepage.When the user clicks checkout in the cart page he goes to the payment page and after that exits the application
+Conclusion:
+The Shopaholics application fulfill the requirments of a shopping application.It is 100% javascript and doesnot need any servers to run it.It is very easy to go through it for the flow and use.I have achieved the rquirements of the project by the above mentioned technologies and styling scripts.
+References:
+AngularJS by Google. The AngularJS home page, with links to samples and documentation.
+A Look Into AngularJS – The "Super-heroic JavaScript MVW Framework". A nice, brief summary of the AngularJS framework.
+Building Huuuuuge Apps with AngularJS. The best documentation I found on how to structure large (or not so large) AngularJS applications.
+Egghead.io. John Lindquist’s series of how-to videos on AngularJS.
+nopCommerce - An open-source shopping cart framework. A CodeProject article describing a full (client/server) shopping cart framework.
+Use of the PayPal payment system in ASP.NET. A CodeProject article about the PayPal payment system, including a lot of interesting and useful details.
